@@ -1,0 +1,9 @@
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/69627893387__F095519C-D2C2-4F19-A8DD-EA09DED51E59.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_1301.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_1679.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_5339.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_5342.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_5413.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_5462.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/IMG_7350.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
+<div class="col-3"> <video width="200vw" controls> <source src="./vids/vid.MOV" type="video/mp4"> Your browser does not support the video tag. </video></div>
