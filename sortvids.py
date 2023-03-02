@@ -1,6 +1,6 @@
 import os
 import cv2
-templates = f'<div class="col-3"> <video width="200vw" controls> <source src="./vids/__" type="video/mp4"> Your browser does not support the video tag. </video></div>'
+templates = f'<div class="row justify-content-center"> <video width="3vw" controls> <source src="./vids/__" type="video/mp4"> Your browser does not support the video tag. </video></div>'
 # print(os.listdir("./vids/"))
 
 vidsfile = open("vids.txt", "w")
