@@ -20,6 +20,24 @@ body {
   text-decoration-style: double;
 }
 
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px dashed blue;
+}
+.video {
+  min-height: 6rem;
+  border: 1px dashed red;
+}
+.video:nth-child(4n),
+.video:nth-child(5n),
+.video:nth-child(6n) {
+  min-height: 3rem;
+  border: 1px dashed orange;
+}
+
 
 .hoverscroll {
   position: relative;
