@@ -5,19 +5,15 @@
 }
 
 .textcol{
-    color: #d0c2da;
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #09061e;
+  
 }
 
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1140px;
   margin: 0 auto;
   padding: 15px 0;
 }
@@ -163,7 +159,7 @@ opacity: 1;
 
 .tcontainer .content h2 {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: calc(1.75vw);
   font-weight: 600px;
   color: #0d002b;
 }

@@ -1,0 +1,203 @@
+body {
+  background-color: #ebebeb;
+  color: #010105;
+  scroll-behavior: smooth;
+}
+
+.title-con{
+  background:linear-gradient(0deg, rgba(212, 212, 212, 0.9), rgb(236, 236, 236)), url("../img/teampic.jpg");
+  background-size:cover;
+}
+
+
+.navbar{
+  background-color: rgb(243, 240, 240);
+  z-index: 2;
+}
+
+.nav-link{
+  color: #010105;
+  text-decoration-style: double;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px dashed blue;
+}
+.video {
+  min-height: 6rem;
+  border: 1px dashed red;
+}
+.video:nth-child(4n),
+.video:nth-child(5n),
+.video:nth-child(6n) {
+  min-height: 3rem;
+  border: 1px dashed orange;
+}
+
+
+.hoverscroll {
+  position: relative;
+  display: inline-block;
+}
+
+.hoverscroll:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #010105;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverscroll:hover:after {
+  transform: scaleX(1);
+  color: #010105;
+  transform-origin: bottom left;
+}
+
+.shine {
+  background: #fff -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#fff),
+      to(#fff),
+      color-stop(0.5, #000)
+    ) 0 0 no-repeat;
+  -webkit-background-size: 150px;
+  color: #f2f7f236;
+  -webkit-background-clip: text;
+  -webkit-animation-name: shine;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  /* text-shadow: 0 0px 0px #fafffaef; */
+}
+
+
+
+@-webkit-keyframes shine {
+  0%,
+  10% {
+    background-position: -1000px;
+  }
+  20% {
+    background-position: top left;
+  }
+  90% {
+    background-position: top right;
+  }
+  100% {
+    background-position: 1000px;
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes square_in {
+  0% {
+		transform: scale(0.7, .7);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+.squareanimate{
+  animation: square_in 1s;
+}
+
+.fadeInBottom {
+  -webkit-animation-name: fadeInBottom;
+  animation-name: fadeInBottom;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.card-link{
+  text-decoration: none;
+}
+
+.experience-link {
+}
+.experience-link a:hover {
+  color: #13061f;
+}
+
+.vnav {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #13061f;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+.vnav li{
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+

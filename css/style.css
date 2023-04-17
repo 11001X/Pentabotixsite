@@ -1,203 +1,136 @@
-body {
-  background-color: #ebebeb;
-  color: #010105;
-  scroll-behavior: smooth;
-}
-
-.title-con{
-  background:linear-gradient(0deg, rgba(212, 212, 212, 0.9), rgb(236, 236, 236)), url("../img/teampic.jpg");
-  background-size:cover;
+html, body {
+    width: 100vw;
 }
 
 
-.navbar{
-  background-color: rgb(243, 240, 240);
-  z-index: 2;
+.home-page-banner{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url("../img/full team pics/teampic.jpg");
+    background-size:cover;
+    min-height: 40vw;
+    color: white;
 }
 
-.nav-link{
-  color: #010105;
-  text-decoration-style: double;
+.home-page-banner .text-grouping{
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
-.videos {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.5rem;
-  padding: 0.5rem;
-  border: 1px dashed blue;
-}
-.video {
-  min-height: 6rem;
-  border: 1px dashed red;
-}
-.video:nth-child(4n),
-.video:nth-child(5n),
-.video:nth-child(6n) {
-  min-height: 3rem;
-  border: 1px dashed orange;
+.process{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    letter-spacing: 0.20vw;
+    
+   
 }
 
-
-.hoverscroll {
-  position: relative;
-  display: inline-block;
+.process ol{
+    height: 65vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
-.hoverscroll:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #010105;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+.process li{
+    scroll-snap-align: start;
 }
 
-.hoverscroll:hover:after {
-  transform: scaleX(1);
-  color: #010105;
-  transform-origin: bottom left;
+.process ol::-webkit-scrollbar{
+    background: black;
 }
-
-.shine {
-  background: #fff -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(#fff),
-      to(#fff),
-      color-stop(0.5, #000)
-    ) 0 0 no-repeat;
-  -webkit-background-size: 150px;
-  color: #f2f7f236;
-  -webkit-background-clip: text;
-  -webkit-animation-name: shine;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-iteration-count: infinite;
-  /* text-shadow: 0 0px 0px #fafffaef; */
+.process ol::-webkit-scrollbar-track{
+    background: white;
 }
-
-
-
-@-webkit-keyframes shine {
-  0%,
-  10% {
-    background-position: -1000px;
+.process ol::-webkit-scrollbar-thumb {
+    background: #000000; 
   }
-  20% {
-    background-position: top left;
+
+.graphics{
+
+}
+
+
+.fast-animation{
+    animation-duration: 0.4s;
+}
+
+.normal-animation{
+    animation-duration: 1s;
+}
+
+.slow-animation{
+    animation-duration: 2s;
+}
+
+.header-slide {
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) translateX(-50%) rotateX(90deg);
+    animation: enter-text 1s ease forwards;
   }
-  90% {
-    background-position: top right;
+  
+  .header-slide::before {
+    content: "";
+    position: absolute;
+    left: -110%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #ff00ff; */
+    animation: fill-bg 1s ease forwards;
+    transform-origin: left;
   }
-  100% {
-    background-position: 1000px;
+  
+  @keyframes enter-text {
+    0% {
+      transform: perspective(1000px) translateX(-50%) rotateX(90deg);
+    }
+    100% {
+      transform: perspective(1000px) translateY(0) rotateX(0);
+    }
   }
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-30px);
+  
+  @keyframes fill-bg {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
+
+
+  .image-container{
+    position: relative;
   }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
+  
+  .loading-image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  
+  .loading-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
   }
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-iteration-count: 1;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
+  
+  .progress {
+    width: 0%;
+    height: 100%;
+    /* background-color: #ff00ff; */
+    transition: width 0.5s ease;
   }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
+  
 
-@keyframes fadeInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@media screen and (max-width:900px) {
+    .home-page-banner{
+        /* min-height: auto; */
+    }
 }
-
-@keyframes square_in {
-  0% {
-		transform: scale(0.7, .7);
-	}
-	100% {
-		transform: scale(1, 1);
-	}
-}
-
-.squareanimate{
-  animation: square_in 1s;
-}
-
-.fadeInBottom {
-  -webkit-animation-name: fadeInBottom;
-  animation-name: fadeInBottom;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.card-link{
-  text-decoration: none;
-}
-
-.experience-link {
-}
-.experience-link a:hover {
-  color: #13061f;
-}
-
-.vnav {
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #13061f;
-  height: 100%; /* Full height */
-  position: fixed; /* Make it stick, even on scroll */
-  overflow: auto; /* Enable scrolling if the sidenav has too much content */
-}
-.vnav li{
-  text-align: center;
-}
-ul{
-  list-style-type: none;
-}
-
